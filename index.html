@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Local Storage CRUD Application</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="login-page">
+    <h3>Event Management Application</h3>
+    <form name="login">
+      <div class="form-field clearfix">
+        <label>Username:</label><input type="text" name="user" placeholder="Enter Username" />
+      </div>
+      <div class="form-field clearfix">
+        <label>Password:</label><input type="password" name="pass" placeholder="Enter Password" />
+      </div>
+      <button type="button" id="login-btn">Login</button>
+    </form>
+  </div>
+
+  <div class="main">
+    <button type="button" id="add-event">Add Event</button>
+    <table class="table-container" id="table-data">
+      <tr>
+        <th>Id</th>
+        <th>Event Name</th>
+        <th>Number of Person</th>
+        <th>Type of Event</th>
+        <th>Food Requirement</th>
+        <th>Action</th>
+      </tr>
+    </table>
+  </div>
+
+  <div class="modal-root" id="modal-main">
+    <div class="modal-mask"></div>
+    <div class="modal-form" id="modal-wrapper">
+      <p id="hide-modal">close</a>
+        <form class="vertical-form" id="vertical-form">
+          <div class="form-field clearfix">
+            <label>Event Name:</label><input type="text" id="event-name" />
+          </div>
+          <div class="form-field clearfix">
+            <label>Number of Person:</label><input type="text" id="number-of-ppl" />
+          </div>
+          <div class="form-field clearfix">
+            <label>Type of Event:</label>
+            <select id="type-of-event">
+              <option selected disabled>- Choose a type of event -</option>
+            </select>
+          </div>
+          <div class="form-field clearfix">
+            <label>Food Requirement:</label>
+            <select id="food-requirement">
+              <option selected disabled>- Choose a Food Requirement -</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+          <button type="button" id="btn-submit">
+            Submit
+          </button>
+        </form>
+    </div>
+  </div>
+
+</body>
+<script type="text/javascript" src="./newscript.js"></script>
+
+</html>
